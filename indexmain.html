@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style1.css">
+    <title>Login</title>
+  </head>
+  <body>
+  
+  <div class="d-lg-flex half">
+    <div class="bg order-1 order-md-2" style="background-image: url('images/bg_1.jpg');"></div> 
+    <div class="contents order-2 order-md-1">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-7">
+            <h3>Personal Blog <strong>Sebastian Pardo</strong></h3>
+            <p class="mb-4">A little of my Personal life.</p>
+            <form id="login-form">
+              <div class="form-group first">
+                <label for="username">Username</label>
+                <input type="text" id="username-field" class="form-control" placeholder="Your Username" name="username">
+              </div>
+              <div class="form-group last mb-3">
+                <label for="password">Password</label>
+                <input type="password" id="password-field"class="form-control" placeholder="Your Password" id="password"name="password">
+              </div>
+              <input type="submit" value="Log In" id="login-form-submit" class="btn btn-block btn-primary">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>  
+  </div>
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      const loginForm = document.getElementById("login-form");
+      const loginButton = document.getElementById("login-form-submit");
+      const loginErrorMsg = document.getElementById("login-error-msg");
+
+      loginButton.addEventListener("click", (e)=> {
+          e.preventDefault();
+          const user = loginForm.username.value;
+          const pass = loginForm.password.value;
+
+          if(user === "sebzz" && pass === "123") {
+              window.location = "index.html";
+          }
+          else
+          {
+              alert("Como que no es mi King");
+          }
+      })
+    </script>
+    
+  </body>
+</html>
